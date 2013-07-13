@@ -12,8 +12,10 @@
       <tr>
         <th><a href="{{ url_for('admin.edit', slug=post.slug) }}">{{ post.title }}</a></th>
         <td>{{ post.created_at.strftime('%Y-%m-%d') }}</td>
-        <td><a href="{{ url_for("admin.edit", slug=post.slug) }}" class="btn primary">Edit</a></td>
-		<td><a href="{{ url_for("admin.remove", slug=post.slug) }}" class="btn btn-danger">Remove</a></td>
+        <td><a href="{{ url_for("admin.edit", slug=post.slug) }}" class="btn primary">Edit</a>
+			<a href="{{ url_for("admin.hide", slug=post.slug) }}" class="btn primary">Hide</a>
+			<a href="{{ url_for("admin.remove", slug=post.slug) }}" class="btn btn-danger">Remove</a>
+		</td>
       </tr>
     {% endfor %}
     </tbody>

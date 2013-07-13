@@ -74,4 +74,5 @@ class Detail(MethodView):
 admin.add_url_rule('/admin/', view_func=List.as_view('index'))
 admin.add_url_rule('/admin/create/', defaults={'slug': None}, view_func=Detail.as_view('create'))
 admin.add_url_rule('/admin/<slug>/', view_func=Detail.as_view('edit'))
-admin.add_url_rule('/admin/<slug>/', view_func=Detail.as_view('remove'))
+admin.add_url_rule('/admin/hide/', defaults={'slug': <slug>}, view_func=List.as_view('hide'))
+admin.add_url_rule('/admin/remove/', defaults={'slug': <slug>}, view_func=LIst.as_view('remove'))
